@@ -11,15 +11,29 @@ API para transcrição de áudio para texto utilizando FastAPI e Whisper.
 
 ## Instalação
 
+### Usando Python local
+
 1. Clone o repositório
 2. Instale as dependências:
 ```bash
 pip install -r requirements.txt
 ```
 
+### Usando Docker
+
+1. Construa a imagem:
+```bash
+docker build -t conversor-audio-texto .
+```
+
+2. Execute o container:
+```bash
+docker run -p 8000:8000 conversor-audio-texto
+```
+
 ## Como usar
 
-1. Inicie o servidor:
+1. Se estiver usando Python local, inicie o servidor:
 ```bash
 uvicorn main:app --reload
 ```
